@@ -2,61 +2,33 @@ package com.company;
 import java.util.Scanner;
 
 public class Action {
-    static Scanner scanner = new Scanner(System.in);
 
-    public static void calc (String[] args) {
-        int num1 = getInt();
-        int num2 = getInt();
-        char operation = getOperation ();
-        int result = calc(num1,num2,operation);
-        System.out.println("Результат = "+result);
-            }
-            public static int getInt(){
-                System.out.println("Введите число:");
-                int num;
-                if(scanner.hasNextInt()){
-                    num = scanner.nextInt();
-                } else {
-                    System.out.println("Ошибка. Попробуйте еще раз.");
-                    scanner.next();//рекурсия
-                    num = getInt();
-                }
-                return num;
-            }
+    private int a;
+    private int b;
 
-    public static char getOperation(){
-        System.out.println("Введите операцию:");
-        char operation;
-        if(scanner.hasNext()){
-            operation = scanner.next().charAt(0);
-        } else {
-            System.out.println("Ошибка. Попробуйте еще раз.");
-            scanner.next();//рекурсия
-            operation = getOperation();
-        }
-        return operation;
+    public Action () {
+         this.a = 0;
+         this.a = 0;
     }
 
-    public static int calc(int num1, int num2, char operation){
-        int result;
-        switch (operation){
-            case '+':
-                result = num1+num2;
-                break;
-            case '-':
-                result = num1-num2;
-                break;
-            case '*':
-                result = num1*num2;
-                break;
-            case '/':
-                result = num1/num2;
-                break;
-            default:
-                System.out.println("Операция не распознана. Повторите ввод.");
-                result = calc(num1, num2, getOperation());//рекурсия
-        }
-        return result;
+    public Action(int a, int b){
+        this.a = a;
+        this.b = b;
     }
+
+    public int add () {
+        return a + b;
+    }
+
+    public int subs () {
+        return a - b;
+    }
+    public int multi (){
+        return a * b;
+    }
+    public int div (){
+        return a / b;
+    }
+
 }
 
