@@ -22,17 +22,30 @@ public class Main {
         System.out.println("5. Exit");
 
         int ChooseAction = readClass.readNextInt();
+        int i =0;
+        do {
+            switch (ChooseAction) {
+                case 1:
+                    System.out.println(action.add());
+                    //break;
+                case 2:
+                    System.out.println(action.subs());
+                    //break;
+                case 3:
+                    System.out.println(action.multi());
+                   // break;
+                case 4:
+                    System.out.println(action.div());
+                    //break;
+                case 5:
+                    i == 1;
+                    //break;
+                default:
+                    System.out.println("You do not choose correct point");
+            }
+            while (i == 1);
 
-        switch (ChooseAction){
-            case 1: System.out.println(action.add()); break;
-            case 2: System.out.println(action.subs()); break;
-            case 3: System.out.println(action.multi()); break;
-            case 4: System.out.println(action.div()); break;
-            case 5: break;
-            default:
-                System.out.println("You do not choose correct point");
         }
-
     }
 
 }
