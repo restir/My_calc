@@ -3,22 +3,18 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
+
         ReadClass readClass = new ReadClass();
         int one;
         int two;
 
-        int i = 0;
-
-        do {
 
             System.out.println("print 1 number ");
             one = readClass.readNextInt();
             System.out.println("print 2 number ");
             two = readClass.readNextInt();
 
-            Action action = new Action(one, two);
-
-            System.out.println("Change action ");
+            System.out.println("Choose action ");
             System.out.println("1. +");
             System.out.println("2. -");
             System.out.println("3. *");
@@ -29,24 +25,25 @@ public class Main {
 
             switch (chooseAction) {
                 case 1:
-                    System.out.println(action.add());
-//                    break;
+                    System.out.println(Action.sum(one,two));
+                    //Main Main = new Main();
+                  //  break;
                 case 2:
-                    System.out.println(action.subs());
-//                    break;
+                    System.out.println(Action.subs(one,two));
+                //    break;
                 case 3:
-                    System.out.println(action.multi());
-//                    break;
+                    System.out.println(Action.multi(one,two));
+               //     break;
                 case 4:
-                    System.out.println(action.div());
-//                    break;
+                    System.out.println(Action.div(one,two));
+                //    break;
                 case 5:
-                    i = 1;
-//                    break;
+                //    break;
                 default:
                     System.out.println("You do not choose correct point");
             }
 
-        }while (i != 1) ;
+      //  }while (y != 1) ;
     }
 }
+

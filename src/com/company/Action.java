@@ -1,17 +1,16 @@
 package com.company;
-import java.util.Scanner;
 
 public class Action {
-
+/*
     private int a;
     private int b;
 
-    public Action () {
+    public Action2() {
          this.a = 0;
          this.a = 0;
     }
 
-    public Action(int a, int b){
+    public Action2(int a, int b){
         this.a = a;
         this.b = b;
     }
@@ -30,9 +29,19 @@ public class Action {
         return a / b;
     }
 
-    public int div (int c){
-        return a / b;
-    }
+ */
+    public static int sum (int c, int d){
+        return c + d; }
+
+    public static int subs (int c, int d){
+        return c - d; }
+
+    public static int multi (int c, int d){
+        return c * d; }
+
+    public static int div (int c, int d){
+        return c / d; }
+
 
 }
 
